@@ -1,8 +1,8 @@
-# 🎬 Film RAG API
+# Film RAG API
 
 An AI-powered film search and recommendation system built with FastAPI, ChromaDB, and OpenAI. This application uses Retrieval-Augmented Generation (RAG) to provide intelligent answers about films from a PostgreSQL database.
 
-## 🚀 Features
+## Features
 
 - **Semantic Film Search**: Find films using natural language queries
 - **AI-Powered Recommendations**: Get intelligent film suggestions based on your questions
@@ -11,7 +11,7 @@ An AI-powered film search and recommendation system built with FastAPI, ChromaDB
 - **Real-time Embeddings**: OpenAI embeddings for semantic understanding
 - **Comprehensive Debugging**: Detailed logging for troubleshooting
 
-## 🏗️ Architecture
+## Architecture
 
 ```
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
@@ -27,14 +27,14 @@ An AI-powered film search and recommendation system built with FastAPI, ChromaDB
 └─────────────────┘    └─────────────────┘    └─────────────────┘
 ```
 
-## 📋 Prerequisites
+## Prerequisites
 
 - Python 3.8+
 - PostgreSQL database with the `dvdrental` schema
 - OpenAI API key
 - Google API key (optional)
 
-## 🛠️ Installation
+## Installation
 
 1. **Clone the repository**
    ```bash
@@ -67,7 +67,7 @@ An AI-powered film search and recommendation system built with FastAPI, ChromaDB
    OPENAI_EMBED_MODEL=text-embedding-3-small
    ```
 
-## 🚀 Quick Start
+## Quick Start
 
 1. **Run data ingestion** (first time only)
    ```bash
@@ -84,7 +84,7 @@ An AI-powered film search and recommendation system built with FastAPI, ChromaDB
    - Alternative Docs: http://localhost:8000/redoc
    - Health Check: http://localhost:8000/
 
-## 📚 API Endpoints
+## API Endpoints
 
 ### `GET /`
 Health check endpoint that confirms the API is running.
@@ -113,7 +113,7 @@ Ask questions about films using natural language.
 }
 ```
 
-## 🔍 Example Queries
+## Example Queries
 
 Here are some example questions you can ask the API:
 
@@ -132,7 +132,7 @@ Here are some example questions you can ask the API:
   - "Films about scientists"
   - "Stories set in the Canadian Rockies"
 
-## 🗂️ Project Structure
+## Project Structure
 
 ```
 ai_rag/
@@ -148,7 +148,7 @@ ai_rag/
 └── chroma_db/             # Persistent ChromaDB storage (created automatically)
 ```
 
-## 🔧 Configuration
+## Configuration
 
 ### Environment Variables
 
@@ -170,7 +170,7 @@ The application expects a PostgreSQL database with a `film` table containing:
 - `rental_rate` (Rental price)
 - `rating` (Film rating)
 
-## 🐛 Debugging
+## Debugging
 
 ### Debug Script
 
@@ -212,7 +212,7 @@ The application includes comprehensive logging that shows:
    - The application uses persistent storage in `./chroma_db/`
    - Ensure the directory has write permissions
 
-## 🔄 Data Ingestion
+## Data Ingestion
 
 The data ingestion process:
 
@@ -226,7 +226,7 @@ To re-run ingestion:
 python3 data_ingestion/ingestion.py
 ```
 
-## 🧪 Testing
+## Testing
 
 ### Manual Testing
 
@@ -249,14 +249,14 @@ The API includes built-in validation and error handling:
 - Error handling for API failures
 - Graceful degradation for missing data
 
-## 🔒 Security Considerations
+## Security Considerations
 
 - Store API keys securely in environment variables
 - Use HTTPS in production
 - Implement rate limiting for production use
 - Consider authentication for sensitive endpoints
 
-## 🚀 Deployment
+## Deployment
 
 ### Development
 ```bash
@@ -278,7 +278,7 @@ COPY . .
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 ```
 
-## 🤝 Contributing
+## Contributing
 
 1. Fork the repository
 2. Create a feature branch
@@ -286,15 +286,14 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 4. Add tests if applicable
 5. Submit a pull request
 
-
-## 🙏 Acknowledgments
+## Acknowledgments
 
 - OpenAI for providing the embedding and completion APIs
 - ChromaDB for vector database functionality
 - FastAPI for the web framework
 - PostgreSQL for the relational database
 
-## 📞 Support
+## Support
 
 For issues and questions:
 1. Check the debugging section above
@@ -304,4 +303,4 @@ For issues and questions:
 
 ---
 
-**Happy film searching! 🎬✨** 
+**Happy film searching!** 
