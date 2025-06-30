@@ -1,15 +1,17 @@
 # Film RAG API
 
-An AI-powered film search and recommendation system built with FastAPI, ChromaDB, and OpenAI. This application uses Retrieval-Augmented Generation (RAG) to provide intelligent answers about films from a PostgreSQL database.
+An AI-powered film search and recommendation system built with FastAPI, ChromaDB, and OpenAI. This application uses Retrieval-Augmented Generation (RAG) to provide intelligent answers about films from a PostgreSQL database, with comprehensive evaluation and testing capabilities.
 
 ## Features
 
 - **Semantic Film Search**: Find films using natural language queries
 - **AI-Powered Recommendations**: Get intelligent film suggestions based on your questions
-- **RESTful API**: Clean, documented API endpoints
+- **RESTful API**: Clean, documented API endpoints with context-aware responses
 - **Persistent Vector Storage**: ChromaDB with persistent storage for reliable data retention
 - **Real-time Embeddings**: OpenAI embeddings for semantic understanding
-- **Comprehensive Debugging**: Detailed logging for troubleshooting
+- **Comprehensive Evaluation**: RAGAS-based evaluation framework for system performance
+- **Automated Testing**: Evaluation dataset generation and performance metrics
+- **Detailed Debugging**: Comprehensive logging and debugging tools
 
 ## Architecture
 
@@ -22,8 +24,8 @@ An AI-powered film search and recommendation system built with FastAPI, ChromaDB
          │                       │                       │
          ▼                       ▼                       ▼
 ┌─────────────────┐    ┌─────────────────┐    ┌─────────────────┐
-│   OpenAI API    │    │   Data          │    │   Film          │
-│   (Embeddings)  │    │   Ingestion     │    │   Database      │
+│   OpenAI API    │    │   Evaluation    │    │   RAGAS         │
+│   (Embeddings)  │    │   Framework     │    │   Metrics       │
 └─────────────────┘    └─────────────────┘    └─────────────────┘
 ```
 
@@ -71,7 +73,7 @@ An AI-powered film search and recommendation system built with FastAPI, ChromaDB
 
 1. **Run data ingestion** (first time only)
    ```bash
-   python3 data_ingestion/ingestion.py
+   python3 data_ingestion/ingest.py
    ```
 
 2. **Start the FastAPI application**
@@ -97,7 +99,7 @@ Health check endpoint that confirms the API is running.
 ```
 
 ### `POST /ask`
-Ask questions about films using natural language.
+Ask questions about films using natural language. Returns both answer and context.
 
 **Request Body:**
 ```json
@@ -109,7 +111,8 @@ Ask questions about films using natural language.
 **Response:**
 ```json
 {
-  "answer": "Academy Dinosaur is an epic drama about a feminist and a mad scientist who must battle a teacher in the Canadian Rockies."
+  "answer": "Academy Dinosaur is an epic drama about a feminist and a mad scientist who must battle a teacher in the Canadian Rockies.",
+  "context": "Title: Academy Dinosaur | Description: A Epic Drama of a Feminist And a Mad Scientist who must Battle a Teacher in The Canadian Rockies | Release Year: 2006 | Rental Rate: $0.99 | Rating: PG"
 }
 ```
 
@@ -136,16 +139,19 @@ Here are some example questions you can ask the API:
 
 ```
 ai_rag/
-├── main.py                 # FastAPI application entry point
-├── requirements.txt        # Python dependencies
-├── config.env             # Environment configuration
-├── README.md              # This file
-├── debug_chroma.py        # Debug script for ChromaDB
+├── main.py                           # FastAPI application entry point
+├── requirements.txt                  # Python dependencies
+├── config.env                       # Environment configuration
+├── README.md                        # This file
+├── evaluation_dataset.json          # Generated evaluation dataset
+├── evaluation_results.json          # Evaluation results (generated)
+├── ragas_evaluation_report.json     # RAGAS evaluation report (generated)
 ├── backend/
-│   └── backend.py         # RAG implementation and OpenAI integration
+│   └── backend.py                   # RAG implementation and OpenAI integration
 ├── data_ingestion/
-│   └── ingestion.py       # Script to populate ChromaDB with film data
-└── chroma_db/             # Persistent ChromaDB storage (created automatically)
+│   ├── ingest.py                    # Script to populate ChromaDB with film data
+│   └── create_evaluation_dataset.py # Generate evaluation questions and answers
+└── chroma_db/                       # Persistent ChromaDB storage (created automatically)
 ```
 
 ## Configuration
@@ -169,6 +175,122 @@ The application expects a PostgreSQL database with a `film` table containing:
 - `release_year` (Release year)
 - `rental_rate` (Rental price)
 - `rating` (Film rating)
+
+## Evaluation Framework
+
+### Overview
+
+The system includes a comprehensive evaluation framework using RAGAS (RAG Assessment) to measure system performance across multiple metrics:
+
+- **Faithfulness**: Measures if generated answers are faithful to provided context
+- **Answer Relevancy**: Measures if generated answers are relevant to questions
+- **Context Precision**: Measures if retrieved context is relevant to questions
+- **Context Recall**: Measures if retrieved context contains the answer
+- **Answer Correctness**: Measures correctness against ground truth
+- **Answer Similarity**: Measures semantic similarity between generated and ground truth
+
+### Evaluation Dataset
+
+Generate a comprehensive evaluation dataset:
+
+```bash
+python3 data_ingestion/create_evaluation_dataset.py
+```
+
+This creates `evaluation_dataset.json` with:
+- 100 questions (5 per film × 20 randomly selected films)
+- Questions covering all film attributes (rating, year, rental rate, description, title)
+- Ground truth answers for comparison
+
+### Running Evaluations
+
+#### Basic Evaluation
+```bash
+python3 evaluate_rag_system.py
+```
+
+#### RAGAS Evaluation (Comprehensive)
+```bash
+python3 evaluation_ragas.py
+```
+
+### Evaluation Metrics
+
+The evaluation provides:
+
+1. **Exact Match Accuracy**: Percentage of exact matches between expected and actual answers
+2. **Partial Match Accuracy**: Percentage of high-similarity matches
+3. **F1 Score**: Harmonic mean of precision and recall
+4. **RAGAS Metrics**: Industry-standard RAG evaluation metrics
+5. **Question Type Analysis**: Performance breakdown by question category
+
+### Evaluation Results
+
+Results are saved to:
+- `evaluation_results.json`: Detailed results with individual question analysis
+- `ragas_evaluation_report.json`: Comprehensive RAGAS evaluation report
+
+## Data Ingestion
+
+### Standard Ingestion
+
+The data ingestion process:
+
+1. **Connects to PostgreSQL** and fetches film data
+2. **Creates embeddings** using OpenAI's text-embedding-3-small model
+3. **Stores vectors** in ChromaDB with persistent storage
+4. **Indexes 100 films** by default (configurable in `ingest.py`)
+
+To run ingestion:
+```bash
+python3 data_ingestion/ingest.py
+```
+
+### Enhanced Features
+
+- **Detailed text embedding**: Includes title, description, release year, rental rate, and rating
+- **Persistent storage**: ChromaDB data persists between sessions
+- **Error handling**: Graceful handling of missing data and API errors
+- **Progress tracking**: Real-time progress updates during ingestion
+
+## Testing
+
+### Manual Testing
+
+Test the API using curl:
+
+```bash
+# Health check
+curl http://localhost:8000/
+
+# Ask a question
+curl -X POST "http://localhost:8000/ask" \
+  -H "Content-Type: application/json" \
+  -d '{"question": "What is Academy Dinosaur about?"}'
+```
+
+### Automated Testing
+
+The API includes built-in validation and error handling:
+- Input validation for question format
+- Error handling for API failures
+- Graceful degradation for missing data
+- Comprehensive evaluation framework
+
+### Performance Testing
+
+Run comprehensive performance tests:
+
+```bash
+# Generate evaluation dataset
+python3 data_ingestion/create_evaluation_dataset.py
+
+# Run basic evaluation
+python3 evaluate_rag_system.py
+
+# Run RAGAS evaluation (requires OpenAI API)
+python3 evaluation_ragas.py
+```
 
 ## Debugging
 
@@ -194,11 +316,12 @@ The application includes comprehensive logging that shows:
 - Embedding creation
 - Vector search results
 - OpenAI API responses
+- Evaluation progress and metrics
 
 ### Common Issues
 
 1. **"No documents found in collection"**
-   - Run the data ingestion script: `python3 data_ingestion/ingestion.py`
+   - Run the data ingestion script: `python3 data_ingestion/ingest.py`
 
 2. **Database connection errors**
    - Verify your `DATABASE_URL` in `config.env`
@@ -212,42 +335,10 @@ The application includes comprehensive logging that shows:
    - The application uses persistent storage in `./chroma_db/`
    - Ensure the directory has write permissions
 
-## Data Ingestion
-
-The data ingestion process:
-
-1. **Connects to PostgreSQL** and fetches film data
-2. **Creates embeddings** using OpenAI's text-embedding-3-small model
-3. **Stores vectors** in ChromaDB with persistent storage
-4. **Indexes 100 films** by default (configurable in `ingestion.py`)
-
-To re-run ingestion:
-```bash
-python3 data_ingestion/ingestion.py
-```
-
-## Testing
-
-### Manual Testing
-
-Test the API using curl:
-
-```bash
-# Health check
-curl http://localhost:8000/
-
-# Ask a question
-curl -X POST "http://localhost:8000/ask" \
-  -H "Content-Type: application/json" \
-  -d '{"question": "What is Academy Dinosaur about?"}'
-```
-
-### Automated Testing
-
-The API includes built-in validation and error handling:
-- Input validation for question format
-- Error handling for API failures
-- Graceful degradation for missing data
+5. **Evaluation timeouts**
+   - RAGAS evaluation may timeout due to API rate limits
+   - Consider running evaluations during off-peak hours
+   - Check OpenAI API usage and limits
 
 ## Security Considerations
 
@@ -255,6 +346,7 @@ The API includes built-in validation and error handling:
 - Use HTTPS in production
 - Implement rate limiting for production use
 - Consider authentication for sensitive endpoints
+- Monitor API usage and costs
 
 ## Deployment
 
@@ -278,13 +370,31 @@ COPY . .
 CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 ```
 
+## Performance Optimization
+
+### Current Performance
+
+Based on evaluation results, the system shows:
+- **Retrieval accuracy**: Needs improvement in document retrieval
+- **Answer generation**: Good when relevant context is found
+- **Context relevance**: Moderate performance in finding relevant documents
+
+### Optimization Strategies
+
+1. **Increase retrieval count**: Retrieve more documents for better coverage
+2. **Improve embeddings**: Fine-tune embedding model for domain-specific performance
+3. **Enhanced prompting**: Optimize prompts for better answer generation
+4. **Hybrid search**: Combine semantic and keyword search
+5. **Metadata filtering**: Use film attributes for targeted retrieval
+
 ## Contributing
 
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
 4. Add tests if applicable
-5. Submit a pull request
+5. Run evaluation scripts to ensure performance
+6. Submit a pull request
 
 ## Acknowledgments
 
@@ -292,6 +402,7 @@ CMD ["uvicorn", "main:app", "--host", "0.0.0.0", "--port", "8000"]
 - ChromaDB for vector database functionality
 - FastAPI for the web framework
 - PostgreSQL for the relational database
+- RAGAS for comprehensive RAG evaluation metrics
 
 ## Support
 
@@ -299,7 +410,8 @@ For issues and questions:
 1. Check the debugging section above
 2. Review the logs for error messages
 3. Run the debug script to diagnose issues
-4. Open an issue in the repository
+4. Check evaluation results for performance insights
+5. Open an issue in the repository
 
 ---
 
