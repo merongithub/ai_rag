@@ -24,7 +24,10 @@ async def ask_question(question: Question):
             raise HTTPException(status_code=400, detail="Question cannot be empty")
         
         response = await ask(question.question)
-        return {"answer": response}
+        return {
+            "answer": response["answer"],
+            "context": response["context"]
+        }
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Internal server error: {str(e)}")
 

@@ -1,0 +1,812 @@
+{
+  "summary": {
+    "total_questions": 100,
+    "exact_matches": 0,
+    "partial_matches": 0,
+    "exact_match_accuracy": 0.0,
+    "partial_match_accuracy": 0.0,
+    "average_f1_score": 0.027737373737373738
+  },
+  "detailed_results": [
+    {
+      "question": "What year was the film Harper Dying released?",
+      "expected": "2006",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the description of the film Hanover Galaxy?",
+      "expected": "A Stunning Reflection of a Girl And a Secret Agent...",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rating of the film Elephant Trojan?",
+      "expected": "PG-13",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the description of the film Tootsie Pilot?",
+      "expected": "A Awe-Inspiring Documentary of a Womanizer And a P...",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rental rate for the film Beauty Grease?",
+      "expected": "$4.99",
+      "actual": "The rental rate for the film Beauty Grease is $4.99.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.19999999999999998
+    },
+    {
+      "question": "What year was the film Tootsie Pilot released?",
+      "expected": "2006",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What year was the film Beauty Grease released?",
+      "expected": "2006",
+      "actual": "The film Beauty Grease was released in 2006.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.2222222222222222
+    },
+    {
+      "question": "What is the title of film ID 398?",
+      "expected": "Hanover Galaxy",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What year was the film Ghostbusters Elf released?",
+      "expected": "2006",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rating of the film Mine Titans?",
+      "expected": "PG-13",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rating of the film Amelie Hellfighters?",
+      "expected": "R",
+      "actual": "The rating of the film Amelie Hellfighters is R.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.2222222222222222
+    },
+    {
+      "question": "What is the rental rate for the film Thief Pelican?",
+      "expected": "$4.99",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rating of the film Home Pity?",
+      "expected": "R",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the description of the film Amelie Hellfighters?",
+      "expected": "A Boring Drama of a Woman And a Squirrel who must ...",
+      "actual": "A Boring Drama of a Woman And a Squirrel who must Conquer a Student in A Baloon",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.8181818181818181
+    },
+    {
+      "question": "What is the rating of the film Pure Runner?",
+      "expected": "NC-17",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the description of the film Scissorhands Slums?",
+      "expected": "A Awe-Inspiring Drama of a Girl And a Technical Wr...",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rental rate for the film Elephant Trojan?",
+      "expected": "$4.99",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What year was the film Champion Flatliners released?",
+      "expected": "2006",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What year was the film Pure Runner released?",
+      "expected": "2006",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rental rate for the film Champion Flatliners?",
+      "expected": "$4.99",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What year was the film Hanover Galaxy released?",
+      "expected": "2006",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the description of the film Harper Dying?",
+      "expected": "A Awe-Inspiring Reflection of a Woman And a Cat wh...",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rental rate for the film Hanover Galaxy?",
+      "expected": "$4.99",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the title of film ID 249?",
+      "expected": "Dracula Crystal",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What year was the film Dracula Crystal released?",
+      "expected": "2006",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rental rate for the film Chasing Fight?",
+      "expected": "$4.99",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rental rate for the film Dracula Crystal?",
+      "expected": "$0.99",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rental rate for the film Grinch Massage?",
+      "expected": "$4.99",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What year was the film Thief Pelican released?",
+      "expected": "2006",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rating of the film Thief Pelican?",
+      "expected": "PG-13",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rental rate for the film Scissorhands Slums?",
+      "expected": "$2.99",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the title of film ID 402?",
+      "expected": "Harper Dying",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rental rate for the film Amelie Hellfighters?",
+      "expected": "$4.99",
+      "actual": "The rental rate for the film Amelie Hellfighters is $4.99.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.19999999999999998
+    },
+    {
+      "question": "What is the title of film ID 381?",
+      "expected": "Grinch Massage",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rating of the film Tootsie Pilot?",
+      "expected": "PG",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the title of film ID 134?",
+      "expected": "Champion Flatliners",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rating of the film Champion Flatliners?",
+      "expected": "PG",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the description of the film Wind Phantom?",
+      "expected": "A Touching Saga of a Madman And a Forensic Psychol...",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rental rate for the film Mine Titans?",
+      "expected": "$4.99",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the title of film ID 277?",
+      "expected": "Elephant Trojan",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rating of the film Scissorhands Slums?",
+      "expected": "G",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What year was the film Tarzan Videotape released?",
+      "expected": "2006",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the description of the film Champion Flatliners?",
+      "expected": "A Amazing Story of a Mad Cow And a Dog who must Ki...",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rating of the film Beauty Grease?",
+      "expected": "G",
+      "actual": "The rating of the film Beauty Grease is G.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.2222222222222222
+    },
+    {
+      "question": "What is the rating of the film Ghostbusters Elf?",
+      "expected": "R",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rental rate for the film Ghostbusters Elf?",
+      "expected": "$0.99",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the description of the film Dracula Crystal?",
+      "expected": "A Thrilling Reflection of a Feminist And a Cat who...",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the title of film ID 139?",
+      "expected": "Chasing Fight",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rental rate for the film Mission Zoolander?",
+      "expected": "$4.99",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the title of film ID 770?",
+      "expected": "Scissorhands Slums",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the title of film ID 61?",
+      "expected": "Beauty Grease",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the title of film ID 619?",
+      "expected": "Neighbors Charade",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the description of the film Grinch Massage?",
+      "expected": "A Intrepid Display of a Madman And a Feminist who ...",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What year was the film Mine Titans released?",
+      "expected": "2006",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the description of the film Neighbors Charade?",
+      "expected": "A Fanciful Reflection of a Crocodile And a Astrona...",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rental rate for the film Harper Dying?",
+      "expected": "$0.99",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rental rate for the film Neighbors Charade?",
+      "expected": "$0.99",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the description of the film Home Pity?",
+      "expected": "A Touching Panorama of a Man And a Secret Agent wh...",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the description of the film Mine Titans?",
+      "expected": "A Amazing Yarn of a Robot And a Womanizer who must...",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rating of the film Dracula Crystal?",
+      "expected": "G",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the description of the film Elephant Trojan?",
+      "expected": "A Beautiful Panorama of a Lumberjack And a Forensi...",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rating of the film Grinch Massage?",
+      "expected": "R",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What year was the film Grinch Massage released?",
+      "expected": "2006",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the description of the film Beauty Grease?",
+      "expected": "A Fast-Paced Display of a Composer And a Moose who...",
+      "actual": "A Fast-Paced Display of a Composer And a Moose who must Sink a Robot in An Abandoned Mine Shaft",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.6666666666666666
+    },
+    {
+      "question": "What year was the film Neighbors Charade released?",
+      "expected": "2006",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rental rate for the film Home Pity?",
+      "expected": "$4.99",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rating of the film Hanover Galaxy?",
+      "expected": "NC-17",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the description of the film Mission Zoolander?",
+      "expected": "A Intrepid Story of a Sumo Wrestler And a Teacher ...",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the description of the film Ghostbusters Elf?",
+      "expected": "A Thoughtful Epistle of a Dog And a Feminist who m...",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What year was the film Wind Phantom released?",
+      "expected": "2006",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the title of film ID 355?",
+      "expected": "Ghostbusters Elf",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What year was the film Elephant Trojan released?",
+      "expected": "2006",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rating of the film Mission Zoolander?",
+      "expected": "PG-13",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rating of the film Neighbors Charade?",
+      "expected": "R",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rating of the film Harper Dying?",
+      "expected": "G",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rental rate for the film Tootsie Pilot?",
+      "expected": "$0.99",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the description of the film Thief Pelican?",
+      "expected": "A Touching Documentary of a Madman And a Mad Scien...",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rental rate for the film Pure Runner?",
+      "expected": "$2.99",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What year was the film Scissorhands Slums released?",
+      "expected": "2006",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the description of the film Pure Runner?",
+      "expected": "A Thoughtful Documentary of a Student And a Madman...",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rating of the film Chasing Fight?",
+      "expected": "PG",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rental rate for the film Tarzan Videotape?",
+      "expected": "$2.99",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rating of the film Tarzan Videotape?",
+      "expected": "PG-13",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the title of film ID 876?",
+      "expected": "Tarzan Videotape",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the title of film ID 896?",
+      "expected": "Tootsie Pilot",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the title of film ID 426?",
+      "expected": "Home Pity",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the title of film ID 583?",
+      "expected": "Mission Zoolander",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the title of film ID 20?",
+      "expected": "Amelie Hellfighters",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What year was the film Chasing Fight released?",
+      "expected": "2006",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rating of the film Wind Phantom?",
+      "expected": "R",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What year was the film Amelie Hellfighters released?",
+      "expected": "2006",
+      "actual": "The film Amelie Hellfighters was released in 2006.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.2222222222222222
+    },
+    {
+      "question": "What is the title of film ID 976?",
+      "expected": "Wind Phantom",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the rental rate for the film Wind Phantom?",
+      "expected": "$0.99",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the title of film ID 704?",
+      "expected": "Pure Runner",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What year was the film Mission Zoolander released?",
+      "expected": "2006",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the description of the film Chasing Fight?",
+      "expected": "A Astounding Saga of a Technical Writer And a Butl...",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What year was the film Home Pity released?",
+      "expected": "2006",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the description of the film Tarzan Videotape?",
+      "expected": "A Fast-Paced Display of a Lumberjack And a Mad Sci...",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the title of film ID 580?",
+      "expected": "Mine Titans",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    },
+    {
+      "question": "What is the title of film ID 887?",
+      "expected": "Thief Pelican",
+      "actual": "I don't know the answer to that question based on the available information.",
+      "exact_match": false,
+      "partial_match": false,
+      "f1_score": 0.0
+    }
+  ]
+}

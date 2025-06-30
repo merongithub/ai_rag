@@ -33,7 +33,7 @@ conn = engine.connect()
 
 # 4. Fetch data from the film table (limited to first 100 films)
 print("📊 Fetching film data...")
-result = conn.execute(text("SELECT film_id, title, description FROM film WHERE film_id <= 100 ORDER BY film_id")).fetchall()
+result = conn.execute(text("SELECT film_id, title, description, release_year, rental_rate, rating FROM film  ORDER BY film_id LIMIT 100")).fetchall()
 print(f"✅ Fetched {len(result)} films from database")
 
 # 5. Connect to ChromaDB with persistent storage
@@ -61,7 +61,7 @@ else:
     # 6. Process and insert into Chroma
     for i, row in enumerate(result):
         film_id = str(row.film_id)
-        text_to_embed = f"{row.title}: {row.description or ''}"
+        text_to_embed = f"Title: {row.title} | Description: {row.description or ''} | Release Year: {row.release_year or 'N/A'} | Rental Rate: ${row.rental_rate or 'N/A'} | Rating: {row.rating or 'N/A'}"
         
         print(f"📝 Processing film {i+1}/{len(result)}: {row.title}")
 

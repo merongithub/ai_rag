@@ -1,0 +1,81 @@
+{
+  "summary": {
+    "total_questions": 100,
+    "ragas_scores": {
+      "faithfulness": 0.0,
+      "answer_relevancy": 0.0,
+      "context_precision": 0.0,
+      "context_recall": 0.0,
+      "answer_correctness": 0.0,
+      "answer_similarity": 0.0
+    },
+    "question_type_analysis": {
+      "rating": {
+        "count": 20,
+        "exact_matches": 0,
+        "exact_match_rate": 0.0,
+        "sample_questions": [
+          "What is the rating of the film Uncut Suicides?",
+          "What is the rating of the film Lawless Vision?",
+          "What is the rating of the film Sons Interview?"
+        ]
+      },
+      "year": {
+        "count": 20,
+        "exact_matches": 0,
+        "exact_match_rate": 0.0,
+        "sample_questions": [
+          "What year was the film Jaws Harry released?",
+          "What year was the film Clue Grail released?",
+          "What year was the film Mission Zoolander released?"
+        ]
+      },
+      "rental_rate": {
+        "count": 20,
+        "exact_matches": 0,
+        "exact_match_rate": 0.0,
+        "sample_questions": [
+          "What is the rental rate for the film Sons Interview?",
+          "What is the rental rate for the film Clue Grail?",
+          "What is the rental rate for the film Jaws Harry?"
+        ]
+      },
+      "description": {
+        "count": 20,
+        "exact_matches": 0,
+        "exact_match_rate": 0.0,
+        "sample_questions": [
+          "What is the description of the film Sleeping Suspects?",
+          "What is the description of the film Perfect Groove?",
+          "What is the description of the film Clue Grail?"
+        ]
+      },
+      "title_by_id": {
+        "count": 20,
+        "exact_matches": 0,
+        "exact_match_rate": 0.0,
+        "sample_questions": [
+          "What is the title of film ID 139?",
+          "What is the title of film ID 936?",
+          "What is the title of film ID 921?"
+        ]
+      }
+    }
+  },
+  "recommendations": [
+    "Improve faithfulness: The generated answers are not well-grounded in the provided context. Consider improving the prompt or retrieval strategy.",
+    "Improve answer relevancy: Generated answers are not sufficiently relevant to the questions. Consider refining the prompt engineering.",
+    "Improve context precision: Retrieved contexts are not relevant enough to the questions. Consider improving the embedding model or retrieval strategy.",
+    "Improve context recall: The retrieved context doesn't contain the necessary information. Consider increasing the number of retrieved documents or improving the retrieval strategy.",
+    "Improve answer correctness: Generated answers don't match the ground truth well. Consider improving the overall RAG pipeline.",
+    "Improve rating questions: Only 0.0% accuracy. Consider specific optimizations for this question type.",
+    "Improve year questions: Only 0.0% accuracy. Consider specific optimizations for this question type.",
+    "Improve rental_rate questions: Only 0.0% accuracy. Consider specific optimizations for this question type.",
+    "Improve description questions: Only 0.0% accuracy. Consider specific optimizations for this question type.",
+    "Improve title_by_id questions: Only 0.0% accuracy. Consider specific optimizations for this question type."
+  ],
+  "detailed_results": [
+    {
+      "question": "What is the title of film ID 139?",
+      "answer": "I don't know the answer to that question based on the available information.",
+      "contexts": 

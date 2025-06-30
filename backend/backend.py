@@ -22,7 +22,10 @@ async def ask(query: str):
         print(f"📊 Collection contains {collection_count} documents")
         
         if collection_count == 0:
-            return "Error: No documents found in the collection. Please run the data ingestion script first."
+            return {
+                "answer": "Error: No documents found in the collection. Please run the data ingestion script first.",
+                "context": ""
+            }
         
         # Get embedding for the query
         print("🤖 Getting query embedding...")
@@ -37,7 +40,7 @@ async def ask(query: str):
         print("🔎 Querying ChromaDB...")
         results = collection.query(
             query_embeddings=[query_embedding],
-            n_results=3
+            n_results=5
         )
         
         print(f"📋 ChromaDB results: {results}")
@@ -47,7 +50,10 @@ async def ask(query: str):
         print(f"📄 Found {len(documents)} relevant documents")
         
         if not documents:
-            return "I don't know the answer to that question. No relevant information found in the database."
+            return {
+                "answer": "I don't know the answer to that question. No relevant information found in the database.",
+                "context": ""
+            }
         
         context = "\n".join(documents)
         print(f"📝 Context length: {len(context)} characters")
@@ -68,14 +74,21 @@ Answer:"""
         # Get response from OpenAI
         response = client.chat.completions.create(
             model="gpt-4",
-            messages=[{"role": "user", "content": prompt}]
+            messages=[{"role": "user", "content": prompt}],
+            temperature=0.7  # Controls randomness (0-2, lower is more focused)
         )
         
         answer = response.choices[0].message.content
         print(f"✅ OpenAI response: {answer}")
         
-        return answer
+        return {
+            "answer": answer,
+            "context": context
+        }
         
     except Exception as e:
         print(f"❌ Error in ask function: {str(e)}")
-        return f"Error: {str(e)}"
+        return {
+            "answer": f"Error: {str(e)}",
+            "context": ""
+        }
